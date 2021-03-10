@@ -11,7 +11,8 @@ const key = 'r2jRbdbVKRy6mnkRnkRP8YgBfg1DKYgZq9n5vIoz';
 const baseUrl = `https://api.nasa.gov/planetary/earth/imagery?lon=${lon}&lat=${lat}&date=2014-02-01&dim=0.10&api_key=${key}`
  
     return(
-        <div>
+        <div className="nasaPic">
+            <h3>View From Space</h3>
              <img src={baseUrl}/>
         </div>
     )
