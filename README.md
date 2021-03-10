@@ -1,2 +1,3 @@
 # Reflection
-;alsdkfja;sldkjfa;sdlkjf;a
+It was a lot of fun collaborating through ideas, methods, and issues. We found that in a group project you are much more effective in resolving issues, because you have more eyes on everything. We collectively agreed that one of our take-a-ways from this project is to keep things simple. We over complicated several aspects of this project, only to later discover a simple solution. We overlooked simple things like, the coordinates console logging correctly and finding the demo key for our API. Everyone had strengths to bring to the project and that benefited the whole group. We will certainly approach the blue badge project by resolving issues methodically. We hope to identify the simplest solutions first. We also got a chance to convert some old react into new react. In doing so, we want to also try to maximize the efficiency of react. We all look forward to our next project together!
+
