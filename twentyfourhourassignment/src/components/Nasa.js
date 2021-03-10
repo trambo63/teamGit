@@ -1,11 +1,14 @@
 import React from 'react';
+import usePosition from './GeoLocation';
 
 const NasaPic = () => {
 
-let lat = 39.7684
-let lon = 86.1581
+let lat = Math.round(usePosition().latitude)
+let lon = Math.round(usePosition().longitude)
+console.log(lon)
+console.log(lat)
 const key = 'r2jRbdbVKRy6mnkRnkRP8YgBfg1DKYgZq9n5vIoz';
-const baseUrl = `https://api.nasa.gov/planetary/earth/imagery?lon=${lon}&lat=${lat}&date=2014-02-01&api_key=${key}`
+const baseUrl = `https://api.nasa.gov/planetary/earth/imagery?lon=${lon}&lat=${lat}&date=2014-02-01&dim=0.10&api_key=${key}`
  
     return(
         <div>

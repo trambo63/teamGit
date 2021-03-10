@@ -14,11 +14,12 @@ const WeatherApp = () => {
     const [tempC, setTempC] = useState('');
     const [tempSwitch, settempSwitch] = useState(true);
 
-    const fetchResultsC = () => {
+    const FetchResultsC = () => {
 
         let lat = Math.round(usePosition().latitude)
         let lon = Math.round(usePosition().longitude)
         console.log(lon)
+        console.log(lat)
         let url = `${baseUrl}?lat=${lat}&lon=${lon}&APPID=${key}${metric}`;
         
         fetch(url)
@@ -26,9 +27,13 @@ const WeatherApp = () => {
             .then(data => setTempC(data.main.temp))
             .catch(err => console.log(err));
     };
-    fetchResultsC();
+    FetchResultsC();
 
-    const fetchResultsF = () => {
+    const FetchResultsF = () => {
+        let lat = Math.round(usePosition().latitude)
+        let lon = Math.round(usePosition().longitude)
+        console.log(lon)
+        console.log(lat)
         let url = `${baseUrl}?q=cleveland&APPID=${key}${imperial}`;
         
         fetch(url)
@@ -36,15 +41,18 @@ const WeatherApp = () => {
             .then(data => setTempF(data.main.temp))
             .catch(err => console.log(err));
     };
-    fetchResultsF();
+    FetchResultsF();
+
     
-    let temp = tempF;
     
     return(
         <div>
-            <p>{temp}</p>
-            {/* <p>{tempC}</p> */}
-            <button>Toogle</button>
+            {
+                tempSwitch?<p>{tempF}</p>:<p>{tempC}</p>
+            }
+            {/* <button onClick={()=>settempSwitch(true)}>Toogle</button>
+            <button onClick={()=>settempSwitch(false)}>Toogle</button> */}
+            <button onClick={()=>settempSwitch(!tempSwitch)}>Toogle</button>
         </div>
     )
 }
