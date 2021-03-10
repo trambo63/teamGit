@@ -1,0 +1,46 @@
+body {
+  background: gray;
+}
+
+.App{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ .tempDisplay {
+  border: solid 5px black;
+  width:600px; 
+  float:left; 
+  height: 300px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: lightblue;
+}
+
+.tempDisplay p {
+  margin-top: 40px;
+}
+
+.nasaPic{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nasaPic h3{
+  text-align: center;
+}
+
+.nasaPic img {
+  border: solid 5px black;
+  width:600px; 
+  height: 300px; 
+  float:right; 
+  margin: 50px
+  
+} 
+
