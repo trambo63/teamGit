@@ -43,12 +43,13 @@ const WeatherApp = () => {
     };
     FetchResultsF();
 
-    
+
     
     return(
-        <div>
+        <div className="tempDisplay">
+            <h3>Current Temp</h3>
             {
-                tempSwitch?<p>{tempF}</p>:<p>{tempC}</p>
+                tempSwitch?<p>{tempF} F</p>:<p>{tempC} C</p>
             }
             {/* <button onClick={()=>settempSwitch(true)}>Toogle</button>
             <button onClick={()=>settempSwitch(false)}>Toogle</button> */}
